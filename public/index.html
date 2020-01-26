@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>clone-wantedly</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+</head>
+
+<body>
+  <div id="root">
+
+    <div class="header">
+      <div class="header__wrap">
+        <a href="index.html#root" class="header__logo"><div class="icon"></div></a>
+        <ul class="header__nav">
+          <li><a href="#" class="header__list">募集をみる</a></li>
+          <li><a href="#" class="header__list">フィードをみる</a></li>
+          <li><a href="#" class="header__list">プロフィール</a></li>
+          <li><a href="#" class="header__list">ツール</a></li>
+        </ul>
+        <form action="" class="header-search">
+          <input type="text" class="header-search__box" placeholder="人や会社、募集を検索">
+          <button type="submit" class="header-search__submit"><i class="fas fa-search fa-lg" style="opacity:0.3;"></i></button>
+        </form>
+        <div class="header__notice">
+          <button class="header__notice-icon"><i class="fas fa-comment-dots"></i></button>
+          <button class="header__notice-icon"><i class="fas fa-user-alt"></i></button>
+          <button class="header__notice-icon"><i class="fas fa-bell"></i></button>
+          <img src="../images/person.jpg" alt="" class="header__avatar">
+        </div>
+        <div class="header__info">
+          <a href="#">
+            <p>Premiumを試す</p>
+            <p>30日間無料で体験</p>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="feature">
+      <div class="feature__wrap">
+        <div class="feature-project">
+          <img src="../images/office.jpg" alt="" class="feature-project__image">
+          <div class="feature-project__body">
+            <div class="feature-project__status">
+              <span class="feature-project__tag">データサイエンティスト</span>
+              <p class="feature-project__entry"><span class="feature-project__count">56</span>エントリー</p>
+            </div>
+            <h2 class="feature-project__copyright">全企業の99.7％を占める中堅・中小企業の課題は日本の課題そのもの。知られざるコマーシャル営業の魅力とは？</h2>
+            <div class="feature-project__content">
+              <div class="feature-project__company">
+                <img src="../images/company-logo.jpg" alt="" class="thumbnail">
+                <div class="company-name">株式会社セールスフォース・ドットコム</div>
+              </div>
+              <div class="feature-project__info">
+                <button class="share"><i class="fas fa-bullhorn"></i></button>
+                <button class="entry">1</button>
+              </div>
+            </div>
+          </div>
+        </div><!-- feature-project -->
+      </div>
+    </div>
+
+    <div id="main-contents">
+      <div class="container">
+        <div class="contents">
+
+          <aside class="aside">
+            <div class="aside__wrap">
+              <div class="aside-header">
+                <ul class="aside-header__menu">
+                  <li><a href="#" class="aside-header__list aside-header__list--selected">シゴト</a></li>
+                  <li><a href="#" class="aside-header__list">ミートアップ</a></li>
+                </ul>
+              </div><!-- aside-header -->
+
+              <div class="aside-contents">
+
+                <div class="side-search">
+                  <div class="side-search__label">
+                    <span>検索条件</span>
+                    <span><i class="fas fa-clipboard"></i></span>
+                  </div>
+                  <div class="side-search__input">
+                    <button type="submit" class="side-search__submit"><i class="fas fa-search"></i></button>
+                    <input type="text" class="side-search__box" placeholder="キーワードで検索">
+                  </div>
+                </div><!-- side-search -->
+
+                <div class="seach-filter">
+                  <div class="seach-filter__selector">エンジニア<i class="fas fa-angle-down fa-lg"></i></div>
+                  <div class="seach-filter__selector">中途採用<i class="fas fa-angle-down fa-lg"></i></div>
+                </div><!-- seach-filter -->
+
+                <div class="search-terms" id="search-terms">
+                  <div class="search-terms__selected">未経験</div>
+                  <div class="search-terms__selected">フロントエンド</div>
+                </div><!-- search-terms -->
+
+                <div class="recommend-search">
+                  <ul class="recommend-search__menu">
+                    <li class="recommend-search__list">フロントエンド</li>
+                    <li class="recommend-search__list">JavaScript</li>
+                    <li class="recommend-search__list">Rails</li>
+                    <li class="recommend-search__list">Angular</li>
+                    <li class="recommend-search__list">React</li>
+                  </ul>
+                </div><!-- recommend-search -->
+
+                <div class="select-search">
+                  <p class="select-search__heading">分野</p>
+                  <ul class="select-search__menu">
+                    <li class="select-search__list">webエンジニア</li>
+                    <li class="select-search__list">モバイルエンジニア</li>
+                    <li class="select-search__list">インフラエンジニア</li>
+                  </ul>
+                </div><!-- select-search -->
+
+                <div class="select-search">
+                  <p class="select-search__heading">地域</p>
+                  <ul class="select-search__menu">
+                    <li class="select-search__list">東京</li>
+                    <li class="select-search__list">関東</li>
+                    <li class="select-search__list">リモート</li>
+                  </ul>
+                </div><!-- select-search -->
+
+                <div class="select-search">
+                  <p class="select-search__heading">特徴</p>
+                  <ul class="select-search__menu">
+                    <li class="select-search__list">TechCrunchに掲載実績あり</li>
+                    <li class="select-search__list">海外進出している</li>
+                    <li class="select-search__list">１億円以上の資金を調達済み</li>
+                  </ul>
+                </div><!-- select-search -->
+
+              </div><!-- aside-contents -->
+            </div>
+          </aside>
+
+          <main class="main">
+            <div class="main__wrap">
+              <div class="main-header">
+                <div class="main-header__count">
+                  <span class="main-header__current">10</span> /
+                  <span class="main-header__total">800</span>
+                </div>
+                <div class="main-header__sort">
+                  <p class="main-header__heading">並び替え</p>
+                  <ul class="main-header__menu">
+                    <li class="main-header__list main-header__list--selected">おすすめ</li>
+                    <li class="main-header__list">新着</li>
+                    <li class="main-header__list">人気</li>
+                  </ul>
+                </div>
+              </div><!-- main-header -->
+
+              <div class="main-contents">
+                <article class="project">
+                  <img src="../images/office.jpg" alt="" class="project__image">
+                  <div class="project__body">
+                    <div class="project__status">
+                      <span class="project__tag">データサイエンティスト</span>
+                      <p class="project__entry"><span class="feature-project__count">56</span>エントリー</p>
+                    </div>
+                    <div class="project__text">
+                      <h2 class="project__copyright">全企業の99.7％を占める中堅・中小企業の課題は日本の課題そのもの。知られざるコマーシャル営業の魅力とは？</h2>
+                      <p class="project__description">私は経営者との対話を通じてお客様の成長を支援したいという、達成意欲の強い方と一緒に働きたいと願っています。もちろん、
+                        そのためのサポートは惜しみなく提供します。 コマーシャル営業での経験を通じて、多くの方々により大きな視野を身につけていただきたい。</p>
+                    </div>
+                    <div class="project__content">
+                      <div class="project__company">
+                        <img src="../images/company-logo.jpg" alt=""  class="thumbnail">
+                        <div class="company-name">株式会社セールスフォース・ドットコム</div>
+                      </div>
+                      <div class="project__info">
+                        <button class="share">1</button>
+                        <button class="bookmark"><i class="far fa-bookmark"></i></button>
+                      </div>
+                    </div>
+                  </div>
+                </article><!-- project -->
+
+                <article class="project">
+                  <img src="../images/office.jpg" alt="" class="project__image">
+                  <div class="project__body">
+                    <div class="project__status">
+                      <span class="project__tag">データサイエンティスト</span>
+                      <p class="project__entry"><span class="feature-project__count">56</span>エントリー</p>
+                    </div>
+                    <div class="project__text">
+                      <h2 class="project__copyright">全企業の99.7％を占める中堅・中小企業の課題は日本の課題そのもの。知られざるコマーシャル営業の魅力とは？</h2>
+                      <p class="project__description">私は経営者との対話を通じてお客様の成長を支援したいという、達成意欲の強い方と一緒に働きたいと願っています。もちろん、
+                        そのためのサポートは惜しみなく提供します。 コマーシャル営業での経験を通じて、多くの方々により大きな視野を身につけていただきたい。</p>
+                    </div>
+                    <div class="project__content">
+                      <div class="project__company">
+                        <img src="../images/company-logo.jpg" alt=""  class="thumbnail">
+                        <div class="company-name">株式会社セールスフォース・ドットコム</div>
+                      </div>
+                      <div class="project__info">
+                        <button class="share">1</button>
+                        <button class="bookmark"><i class="far fa-bookmark"></i></button>
+                      </div>
+                    </div>
+                  </div>
+                </article><!-- project -->
+
+                <article class="project">
+                  <img src="../images/office.jpg" alt="" class="project__image">
+                  <div class="project__body">
+                    <div class="project__status">
+                      <span class="project__tag">データサイエンティスト</span>
+                      <p class="project__entry"><span class="feature-project__count">56</span>エントリー</p>
+                    </div>
+                    <div class="project__text">
+                      <h2 class="project__copyright">全企業の99.7％を占める中堅・中小企業の課題は日本の課題そのもの。知られざるコマーシャル営業の魅力とは？</h2>
+                      <p class="project__description">私は経営者との対話を通じてお客様の成長を支援したいという、達成意欲の強い方と一緒に働きたいと願っています。もちろん、
+                        そのためのサポートは惜しみなく提供します。 コマーシャル営業での経験を通じて、多くの方々により大きな視野を身につけていただきたい。</p>
+                    </div>
+                    <div class="project__content">
+                      <div class="project__company">
+                        <img src="../images/company-logo.jpg" alt=""  class="thumbnail">
+                        <div class="company-name">株式会社セールスフォース・ドットコム</div>
+                      </div>
+                      <div class="project__info">
+                        <button class="share">1</button>
+                        <button class="bookmark"><i class="far fa-bookmark"></i></button>
+                      </div>
+                    </div>
+                  </div>
+                </article><!-- project -->
+              </div><!-- main-contents -->
+            </div>
+          </main>
+
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="footer__wrap"></div>
+    </footer>
+
+  </div>
+</body>
+</html>

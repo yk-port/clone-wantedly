@@ -1,0 +1,63 @@
+/* =======================
+main
+======================= */
+.main {
+  width: 560px;
+  &__wrap {
+    display: grid;
+    grid-row-gap: 16px;
+  }
+}
+
+/* =======================
+main-header
+======================= */
+.main-header {
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &__count {
+    font-size: 1.4rem;
+    color: $gray;
+  }
+  &__current {
+    font-size: 1.2rem;
+    color: $gray;
+  }
+  &__total {
+    font-size: 1.6rem;
+    color: $dark-gray;
+  }
+  &__sort {
+    display: flex;
+    align-items: center;
+  }
+  &__heading {
+    font-size: 1.2rem;
+    color: $gray;
+    margin-right: 16px;
+    padding-top: 2px;
+  }
+  &__menu {
+    display: flex;
+    align-items: center;
+  }
+  &__list {
+    font-size: 1.4rem;
+    color: $dark-gray;
+    margin-left: 16px;
+    &--selected {
+      color: $theme-color;
+    }
+  }
+}
+
+/* =======================
+main-contents
+======================= */
+.main-contents {
+  width: 100%;
+  display: grid;
+  grid-row-gap: 40px;
+}
