@@ -10,7 +10,7 @@ const sassGlob = require('gulp-sass-glob');
  */
 const compileSass = () =>
   // style.scssファイルを取得
-  src("stylesheets/style.scss")
+  src("css/style.scss")
     // Sassの@importにおけるglobを有効にする
     .pipe(sassGlob())
     // Sassのコンパイルを実行
@@ -19,12 +19,12 @@ const compileSass = () =>
       sass({ outputStyle: "expanded" })
     )
     // root直下にstyle.cssという名前で保存
-    .pipe(dest("./"));
+    .pipe(dest("./public/"));
 
 /**
  * Sassファイルを監視し、変更があったらSassを変換する
  */
-const watchSassFiles = () => watch("./stylesheets/**/*.scss", compileSass);
+const watchSassFiles = () => watch("./css/**/*.scss", compileSass);
 
 // gulpというコマンドを実行した時、watchSassFilesが実行されるようにする
 exports.default = watchSassFiles;
