@@ -1,15 +1,24 @@
 import React from 'react';
 
 class RecommendSearch extends React.Component {
+  renderTerms() {
+    let searchTermsDom = this.props.termsLists.map(termsList => {
+      if (!termsList.selected) {
+        return (
+          <li className="recommend-search__list" key={termsList.id}>
+            {termsList.terms}
+          </li>
+        );
+      }
+    });
+    return searchTermsDom;
+  }
+
   render() {
-    return(
+    return (
       <div className="recommend-search">
         <ul className="recommend-search__menu">
-          <li className="recommend-search__list">フロントエンド</li>
-          <li className="recommend-search__list">JavaScript</li>
-          <li className="recommend-search__list">Rails</li>
-          <li className="recommend-search__list">Angular</li>
-          <li className="recommend-search__list">React</li>
+          {this.renderTerms()}
         </ul>
       </div>
     );
