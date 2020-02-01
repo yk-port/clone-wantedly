@@ -1,0 +1,31 @@
+@charset 'utf-8';
+
+/* ================================
+*  ベース
+* ============================== */
+@import "./css/1-base/variables";
+@import "./css/1-base/color";
+@import "./css/1-base/reset";
+@import "./css/1-base/config";
+
+/* ================================
+*  レイアウト
+* ============================== */
+@import "./css/2-layouts/container";
+
+/* ================================
+*  コンポーネント
+* ============================== */
+@import "./css/3-components/header";
+@import "./css/3-components/feature-project";
+@import "./css/3-components/main";
+@import "./css/3-components/aside";
+@import "./css/3-components/feature";
+@import "./css/3-components/project";
+@import "./css/3-components/search-terms";
+@import "./css/3-components/footer";
+
+/* ================================
+*  ページ
+* ============================== */
+@import "./css/4-pages/main-contents";
