@@ -15,20 +15,20 @@ class SearchTerms extends React.Component {
         { id: 6, terms: 'React', tag: 'recommend', selected: false },
       ],
     };
+  }
 
-    renderTerms() {
-      this.state.termsLists.forEach(termsList => {
-        if (termsList.selected) {
-          <div className="search-terms__selected">{termsList.term}</div>
-        }
-      });
-    }
+  renderTerms() {
+    this.state.termsLists.forEach(termsList => {
+      if (termsList.selected) {
+        return (<div className="search-terms__selected">{termsList.term}</div>);
+      }
+    });
   }
 
   render() {
     return (
       <div className="search-terms" id="search-terms">
-        {renderTerms()}
+        {this.renderTerms()}
       </div>
     );
   }
