@@ -1,16 +1,16 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
+// import RecommendSearch from './RecommendSearch';
 class SearchTerms extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
       termsLists: [
-        { id: 1, terms: '未経験', tag: 'recommend', selected: false },
+        { id: 1, terms: '未経験', tag: 'recommend', selected: true },
         { id: 2, terms: 'フロントエンド', tag: 'recommend', selected: false },
         { id: 3, terms: 'JavaScript', tag: 'recommend', selected: false },
-        { id: 4, terms: 'Rails', tag: 'recommend', selected: false },
+        { id: 4, terms: 'Rails', tag: 'recommend', selected: true },
         { id: 5, terms: 'サーバーサイド', tag: 'recommend', selected: false },
         { id: 6, terms: 'React', tag: 'recommend', selected: false },
       ],
@@ -18,11 +18,16 @@ class SearchTerms extends React.Component {
   }
 
   renderTerms() {
-    this.state.termsLists.forEach(termsList => {
+    let searchTermsDom = this.state.termsLists.map(termsList => {
       if (termsList.selected) {
-        return (<div className="search-terms__selected">{termsList.term}</div>);
+        return (
+          <div className="search-terms__selected" key={termsList.id}>
+            {termsList.terms}
+          </div>
+        );
       }
     });
+    return searchTermsDom;
   }
 
   render() {
@@ -32,10 +37,6 @@ class SearchTerms extends React.Component {
       </div>
     );
   }
-}
-
-SearchTerms.propTypes = {
-  renderTerms: PropTypes.func.isRequired,
 }
 
 export default SearchTerms;
