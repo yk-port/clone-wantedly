@@ -5,9 +5,9 @@ class RecommendSearch extends React.Component {
     this.props.onAddTerms(id);
   }
 
-  renderTerms() {
+  renderTerms(tag) {
     let searchTermsDom = this.props.termsLists.map(termsList => {
-      if (!termsList.selected) {
+      if (termsList.tag === tag && !termsList.selected) {
         return (
           <li className="recommend-search__list"
               key={termsList.id}
@@ -24,7 +24,7 @@ class RecommendSearch extends React.Component {
     return (
       <div className="recommend-search">
         <ul className="recommend-search__menu">
-          {this.renderTerms()}
+          {this.renderTerms('recommend')}
         </ul>
       </div>
     );
