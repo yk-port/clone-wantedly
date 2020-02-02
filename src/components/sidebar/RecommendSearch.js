@@ -1,11 +1,17 @@
 import React from 'react';
 
 class RecommendSearch extends React.Component {
+  handleClickAddTerms(id) {
+    this.props.onAddTerms(id);
+  }
+
   renderTerms() {
     let searchTermsDom = this.props.termsLists.map(termsList => {
       if (!termsList.selected) {
         return (
-          <li className="recommend-search__list" key={termsList.id}>
+          <li className="recommend-search__list"
+              key={termsList.id}
+              onClick={() => this.handleClickAddTerms(termsList.id)} >
             {termsList.terms}
           </li>
         );

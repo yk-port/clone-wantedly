@@ -23,6 +23,24 @@ class Sidebar extends React.Component {
     };
   }
 
+  onDeleteTerms(id) {
+    let _state = Object.assign({}, this.state);
+    let selectedTerms = _state.termsLists.find(termsList => {
+      return termsList.id === id;
+    });
+    selectedTerms.selected = false;
+    this.setState({ _state });
+  }
+
+  onAddTerms(id) {
+    let _state = Object.assign({}, this.state);
+    let selectedTerms = _state.termsLists.find(termsList => {
+      return termsList.id === id;
+    });
+    selectedTerms.selected = true;
+    this.setState({ _state });
+  }
+
   render() {
     return(
       <aside className="aside">
@@ -32,9 +50,11 @@ class Sidebar extends React.Component {
             <SideSearch />
             <SeachFilter />
             <SearchTerms
-              termsLists={this.state.termsLists} />
+              termsLists={this.state.termsLists}
+              onDeleteTerms={(id) => this.onDeleteTerms(id)} />
             <RecommendSearch
-              termsLists={this.state.termsLists} />
+              termsLists={this.state.termsLists}
+              onAddTerms={(id) => this.onAddTerms(id)} />
             <SelectSearch />
           </div>
         </div>
