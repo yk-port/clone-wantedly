@@ -5,7 +5,7 @@ class SideSearch extends React.Component {
     return(
       <div className="side-search">
         <div className="side-search__label">
-          <span>検索条件</span>
+          <span className="side-search__title">検索条件</span>
           <span><i className="fas fa-clipboard"></i></span>
         </div>
         <div className="side-search__input">
