@@ -15,6 +15,14 @@ class RecommendSearch extends React.Component {
             {termsList.terms}
           </li>
         );
+      } else if (termsList.tag === tag && termsList.selected) {
+        return (
+          <li className="recommend-search__list recommend-search__list--selected"
+              key={termsList.id}
+              onClick={() => this.handleClickAddTerms(termsList.id)} >
+            {termsList.terms}
+          </li>
+        );
       }
     });
     return searchTermsDom;
