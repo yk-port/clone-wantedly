@@ -11,7 +11,6 @@ class SideSearch extends React.Component {
 
   handleClickShowSearchHistory() {
     let showFlag = this.state.showSearchHistory;
-    console.log(showFlag);
     this.setState({ showSearchHistory: !showFlag ? true : false });
   }
 
