@@ -51,6 +51,7 @@ aside-contents
 }
 .side-search {
   width: 100%;
+  position: relative;
   &__label {
     width: 100%;
     margin-bottom: 16px;
@@ -59,13 +60,18 @@ aside-contents
     font-size: 1.4rem;
     color: $gray;
     i {
-      margin-right: 8px;
+      padding: 8px;
       font-size: 1.2em;
+      cursor: pointer;
     }
+  }
+  &__title {
+    padding: 8px 0;
   }
   &__input {
     width: 100%;
     display: flex;
+    margin-top: -8px;
     position: relative;
     align-items: center;
   }
