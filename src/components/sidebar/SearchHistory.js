@@ -5,15 +5,14 @@ class SearchHistory extends React.Component {
     super(props);
     this.state = {
       histories: [
-        { id: 1, label: 'React', offer: '中途採用', position: 'エンジニア', bookFlag: 0 },
-        { id: 2, label: 'Rails', offer: 'インターン', position: 'エンジニア', bookFlag: 0 },
-        { id: 3, label: 'マークアップ', offer: '業務委託', position: 'デザイナー', bookFlag: 0 },
-        { id: 4, label: 'AWS', offer: '中途採用', position: 'エンジニア', bookFlag: 0 },
-        { id: 5, label: 'カスタマーサクセス', offer: '中途採用', position: 'コーポレート', bookFlag: 0 },
-        { id: 6, label: 'UI/UX', offer: '業務委託', position: 'デザイナー', bookFlag: 0 },
-        { id: 7, label: 'スタートアップ', offer: '中途採用', position: 'ディレクター', bookFlag: 0 },
+        { id: 1, label: 'React', offer: '中途採用', position: 'エンジニア', bookFlag: false },
+        { id: 2, label: 'Rails', offer: 'インターン', position: 'エンジニア', bookFlag: false },
+        { id: 3, label: 'マークアップ', offer: '業務委託', position: 'デザイナー', bookFlag: false },
+        { id: 4, label: 'AWS', offer: '中途採用', position: 'エンジニア', bookFlag: false },
+        { id: 5, label: 'カスタマーサクセス', offer: '中途採用', position: 'コーポレート', bookFlag: false },
+        { id: 6, label: 'UI/UX', offer: '業務委託', position: 'デザイナー', bookFlag: false },
+        { id: 7, label: 'スタートアップ', offer: '中途採用', position: 'ディレクター', bookFlag: false },
       ],
-      currentBookFlagNumber: 0,
     }
   }
 
@@ -22,30 +21,24 @@ class SearchHistory extends React.Component {
     let listItem = _state.histories.find(history => {
       return history.id === id;
     });
-    let currentBookFlagNumber = _state.currentBookFlagNumber + 1;
-    if (listItem.bookFlag === 0) {
-      
-      console.log(currentBookFlagNumber);
-      
-      this.setState({ currentBookFlagNumber: 10 });
-
-      console.log(this.state.currentBookFlagNumber);
-
-    } else {
-      this.setState({ currentBookFlagNumber: 0 });
+    switch (listItem.bookFlag) {
+      case true:
+        listItem.bookFlag = false;
+        break;
+      case false:
+        listItem.bookFlag = true;
+        break;
+      default:
+        break;
     }
-    this.setState(_state);
-    console.log(_state);
-
     this.sortForSearchHistoryList(_state);
   }
 
   sortForSearchHistoryList(_state) {
     _state.histories.sort((a, b) => {
-      if (a.bookFlag < b.b) {
-        return 1;
-      }
+      return b.bookFlag ? 1 : -1;
     });
+    this.setState(_state);
   }
 
   renderSearchHistoryList() {
