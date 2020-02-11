@@ -41,6 +41,14 @@ class SearchHistory extends React.Component {
     this.setState(_state);
   }
 
+  switchStar(history) {
+    if (history.bookFlag) {
+      return (<i className="fas fa-star fa-lg checked"></i>);
+    } else {
+      return (<i className="far fa-star fa-lg"></i>);
+    }
+  }
+
   renderSearchHistoryList() {
     let listDom = this.state.histories.map(history => (
       <li className="search-history__list"
@@ -55,7 +63,7 @@ class SearchHistory extends React.Component {
           </p>
         </div>
         <div className="search-history__icon">
-          <i className="far fa-star fa-lg"></i>
+          {this.switchStar(history)}
         </div>
       </li>
     ));
